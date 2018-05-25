@@ -1,0 +1,109 @@
+<!--index.wxml-->
+<view class='bg'>
+  <view class='jd-fixed'>
+    <view class='jd-header'>
+    <view class='jd-search-icon-back'></view>
+      <view class='input-wrap'>
+        <form>
+          <view class='jd-form'>
+            <!-- <image style='width:10rpx;height:10rpx;' mode="{{item.mode}}" src="{{src}}"></image> -->
+            <input class='search-input' placeholder="请搜索" />
+          </view>
+        </form>
+      </view>
+
+      <text class='login'>登录</text>
+    </view>
+  </view>
+
+  <swiper class='slide' indicator-dots="true"  autoplay="true">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" mode='aspectFill' style='height:360rpx' />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='class-select'>
+    <view class='class-item'>
+      <view class='jd-class-image' bindtap="openPage" wx:for="{{classImgUrls}}">
+        <view>
+          <image src="{{item.imageUrl}}" mode='aspectFill' style='height:100rpx;width:100rpx' />
+        </view>
+        <text>{{item.text}}</text>
+      </view>
+
+    </view>
+    <view class='class-item'>
+      <view class='jd-class-image' wx:for="{{classImgUrls1}}">
+        <view>
+          <image src="{{item.imageUrl}}" mode='aspectFill' style='height:100rpx;width:100rpx' />
+        </view>
+        <text>{{item.text}}</text>
+      </view>
+
+    </view>
+  </view>
+  <view class='jd-discount'>
+    <view class='jd-discount-bg'>
+      <view class='discount-header'>
+        <view class='discount-left'>
+          <view class='disc-icon'></view>
+          <text>10点场</text>
+          <view class='time-wrap'>
+            <view class='time'>01</view>:
+            <view class='time'>01</view>:
+            <view class='time'>01</view>
+          </view>
+        </view>
+        <view class='discount-arrow'>
+          <view class='arrow-text'>精选尖货秒</view>
+          <view class='msite-seckill__arrow'></view>
+        </view>
+      </view>
+      <view class='discount-content'>
+        <scroll-view bindscrolltolower="lower" scroll-x="true">
+          <view class='goods-wrap'>
+            <view wx:for="{{goodlist}}" class='disc-content-item'>
+              <image style="width: 160rpx; height: 160rpx;" mode="aspectFill" src="{{item.goodsImg}}"></image>
+              <view class='price'>¥{{item.discPrice}}</view>
+              <view class='disc-price'>{{item.price}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+  <view class='jd-fuli'>
+    <view class='jd-fuli-bg'>
+      <image src="{{fuliImage}}" mode='aspectFill' style='height:230rpx' />
+    </view>
+  </view>
+  <view class='tuijian'>
+    <view class='msite-rec__title'>
+      <view class='msite-rec__title-line'></view>
+      <view class='msite-rec__title-con'> 为你推荐
+      </view>
+    </view>
+    <view class='msite-rec__goods'>
+      <view class='msite-rec__good' wx:for="{{goodsArray}}">
+        <view class='msite-rec__good-inner'>
+          <image src="{{item.image}}" mode='aspectFill' style='width:100%;height:370rpx' />
+          <view class='msite-rec__good-desc'>
+            {{item.desc}}
+          </view>
+          <view class='msite-rec__good-price'>
+            <text class='small-price'></text> {{item.price}}
+            <text class='small-price'>.00</text>
+          </view>
+          <view class='msite-rec__good-tip'>
+            好评率{{item.rate}}
+          </view>
+          <view class='msite-rec__good-btn'>
+            看相似
+          </view>
+        </view>
+      </view>
+      <view class='clear'></view>
+    </view>
+  </view>
+</view>

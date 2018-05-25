@@ -1,0 +1,25 @@
+<view>
+  <view class='categoryBody'>
+    <view class='jd-category-tab'>
+      <view style="overflow: hidden; height: 100%;">
+        <view class='category-tab-item'>热门推荐</view>
+        <view class='category-tab-item'>热门推荐</view>
+        <view class='category-tab-item'>热门推荐</view>
+        <view class='category-tab-item'>热门推荐</view>
+        <view class='category-tab-item'>热门推荐</view>
+        <view class='category-tab-item'>热门推荐</view>
+        <view class='category-tab-item'>热门推荐</view>
+        <view class='category-tab-item'>热门推荐</view>
+        <view class='category-tab-item'>热门推荐</view>
+        <view class='category-tab-item'>热门推荐</view>
+        <view class='category-tab-item'>热门推荐</view>
+        <view class='category-tab-item'>热门推荐</view>
+        <view class='category-tab-item'>热门推荐</view>
+        <view class='category-tab-item'>热门推荐</view>
+      </view>
+    </view>
+    <view class='jd-category-content'>
+      <view class='jd-category-content-wrapper'>你會很難牛湖</view>
+    </view>
+  </view>
+</view>
